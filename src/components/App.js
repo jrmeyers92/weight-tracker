@@ -6,6 +6,7 @@ import InputWeight from "./InputWeight/InputWeight";
 function App() {
 	const [newWeight, setNewWeight] = useState(null);
 	const [newDate, setNewDate] = useState(null);
+	const dataPoint = [];
 
 	const onSubmit = (weight, date) => {
 		setNewWeight(weight);

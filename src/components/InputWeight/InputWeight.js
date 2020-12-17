@@ -7,8 +7,9 @@ const InputWeight = (props) => {
 
 	const onFormSubmit = (e) => {
 		e.preventDefault();
-
 		props.onSubmit(weight, date);
+		setWeight("");
+		setDate("");
 	};
 
 	return (
@@ -20,6 +21,7 @@ const InputWeight = (props) => {
 						<label className={styles.form__label}>Weight:</label>
 						<input
 							type='text'
+							required
 							className={styles.form__input}
 							value={weight}
 							onChange={(e) => {
@@ -30,6 +32,7 @@ const InputWeight = (props) => {
 						<label className={styles.form__label}>Date:</label>
 						<input
 							type='date'
+							required
 							className={styles.form__input}
 							value={date}
 							onChange={(e) => {
