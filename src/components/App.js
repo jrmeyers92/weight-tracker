@@ -7,10 +7,15 @@ function App() {
 	const [newWeight, setNewWeight] = useState(null);
 	const [newDate, setNewDate] = useState(null);
 
+	const onSubmit = (weight, date) => {
+		setNewWeight(weight);
+		setNewDate(date);
+	};
+
 	return (
 		<div className={styles.app}>
 			<Nav />
-			<InputWeight />
+			<InputWeight onSubmit={onSubmit} />
 		</div>
 	);
 }
