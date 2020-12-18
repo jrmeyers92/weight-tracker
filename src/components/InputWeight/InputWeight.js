@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styles from "./InputWeight.module.css";
 
 const InputWeight = (props) => {
-	const [weight, setWeight] = useState(null);
-	const [date, setDate] = useState(null);
+	const [weight, setWeight] = useState("");
+	const [date, setDate] = useState("");
 
 	const onFormSubmit = (e) => {
 		e.preventDefault();
